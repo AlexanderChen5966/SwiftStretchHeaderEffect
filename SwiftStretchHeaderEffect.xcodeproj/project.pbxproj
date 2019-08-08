@@ -9,9 +9,6 @@
 /* Begin PBXBuildFile section */
 		9F43A01522FBC54D0066378E /* UINavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F43A01422FBC54D0066378E /* UINavigationControllerExtension.swift */; };
 		9F43A01722FBC5BD0066378E /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F43A01622FBC5BD0066378E /* UIColorExtension.swift */; };
-		9F43A01A22FC148E0066378E /* ScrollViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F43A01922FC148E0066378E /* ScrollViewController2.swift */; };
-		9F43A01C22FC15A70066378E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F43A01B22FC15A70066378E /* ViewController.swift */; };
-		9F43A01E22FC15C30066378E /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F43A01D22FC15C30066378E /* SecondViewController.swift */; };
 		9F59652F22FA75E50049D567 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F59652E22FA75E50049D567 /* AppDelegate.swift */; };
 		9F59653122FA75E50049D567 /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F59653022FA75E50049D567 /* ScrollViewController.swift */; };
 		9F59653422FA75E50049D567 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F59653222FA75E50049D567 /* Main.storyboard */; };
@@ -23,9 +20,6 @@
 /* Begin PBXFileReference section */
 		9F43A01422FBC54D0066378E /* UINavigationControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINavigationControllerExtension.swift; sourceTree = "<group>"; };
 		9F43A01622FBC5BD0066378E /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
-		9F43A01922FC148E0066378E /* ScrollViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewController2.swift; sourceTree = "<group>"; };
-		9F43A01B22FC15A70066378E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9F43A01D22FC15C30066378E /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		9F59652B22FA75E50049D567 /* SwiftStretchHeaderEffect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftStretchHeaderEffect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F59652E22FA75E50049D567 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9F59653022FA75E50049D567 /* ScrollViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
@@ -78,10 +72,7 @@
 				9F43A01822FBC6C70066378E /* Extension */,
 				9F59652E22FA75E50049D567 /* AppDelegate.swift */,
 				9F59653022FA75E50049D567 /* ScrollViewController.swift */,
-				9F43A01922FC148E0066378E /* ScrollViewController2.swift */,
 				9F59654022FACC3B0049D567 /* TableViewController.swift */,
-				9F43A01B22FC15A70066378E /* ViewController.swift */,
-				9F43A01D22FC15C30066378E /* SecondViewController.swift */,
 				9F59653222FA75E50049D567 /* Main.storyboard */,
 				9F59653522FA75E70049D567 /* Assets.xcassets */,
 				9F59653722FA75E70049D567 /* LaunchScreen.storyboard */,
@@ -161,12 +152,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F43A01E22FC15C30066378E /* SecondViewController.swift in Sources */,
 				9F59653122FA75E50049D567 /* ScrollViewController.swift in Sources */,
 				9F59654122FACC3B0049D567 /* TableViewController.swift in Sources */,
-				9F43A01A22FC148E0066378E /* ScrollViewController2.swift in Sources */,
 				9F43A01722FBC5BD0066378E /* UIColorExtension.swift in Sources */,
-				9F43A01C22FC15A70066378E /* ViewController.swift in Sources */,
 				9F59652F22FA75E50049D567 /* AppDelegate.swift in Sources */,
 				9F43A01522FBC54D0066378E /* UINavigationControllerExtension.swift in Sources */,
 			);

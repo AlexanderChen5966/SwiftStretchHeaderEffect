@@ -225,7 +225,8 @@ extension UIViewController {
         static var navBarBgAlpha: CGFloat = 1.0
         static var navBarBgColor: UIColor = .white
         
-        static var navBarTintColor: UIColor = UIColor(r: 148, g: 31, b: 150)
+//        static var navBarTintColor: UIColor = UIColor(r: 148, g: 31, b: 150)
+        static var navBarTintColor: UIColor = .white
         static var navBarTitleColor: UIColor = UIColor(r: 102, g: 102, b: 102)
         static var statusBarStyle: UIStatusBarStyle = .default
         static var isHiddenShadowImage: Bool = false

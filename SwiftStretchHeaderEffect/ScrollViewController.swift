@@ -35,44 +35,24 @@ class ScrollViewController: UIViewController {
         avatarImage.layer.borderColor = UIColor.white.cgColor
         avatarImage.layer.borderWidth = 3.0
         
-//        if let viewControllers = self.navigationController?.viewControllers {
-//            debugPrint("is navigationController")
-//            closeButton.isHidden = true
-//            hasNavigationController = true
-//
-//
-//            navBarBgAlpha = 0
-//            navBarTitleColor = .clear
-//            isHiddenShadowImage = true
-//        } else {
-//            debugPrint("not navigationController")
-//        }
-
-
-    }
-
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
         if let viewControllers = self.navigationController?.viewControllers {
             debugPrint("is navigationController")
-//            hasNavigationController = true
             closeButton.isHidden = true
+            hasNavigationController = true
 
-
-            navBarBgAlpha = 1
+            navBarBgAlpha = 0
             navBarTitleColor = .clear
+            navBarBgColor = .clear
             isHiddenShadowImage = true
-//            navBarBgColor = .orange
-
-
+            
+            headerColorView.isHidden = true
         } else {
             debugPrint("not navigationController")
-            hasNavigationController = false
-
         }
 
 
     }
+
     
     @IBAction func closePageHandler(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
@@ -94,10 +74,6 @@ extension ScrollViewController: UIScrollViewDelegate {
             let headerSizevariation = ((headerView.bounds.height * (1.0 + headerScaleFactor)) - headerView.bounds.height)/2.0
             headerTransform = CATransform3DTranslate(headerTransform, 0, headerSizevariation, 0)
             headerTransform = CATransform3DScale(headerTransform, 1.0 + headerScaleFactor, 1.0 + headerScaleFactor, 0)
-
-            // Hide views if scrolled super fast
-//            headerView.layer.transform = headerTransform
-//            headerView.layer.zPosition = 0
 
             if headerColorViewAlpha != 0 {
                 headerColorView?.alpha = 0
@@ -127,16 +103,22 @@ extension ScrollViewController: UIScrollViewDelegate {
             if offset <= offsetHeaderStop {
                 if avatarImage.layer.zPosition < headerView.layer.zPosition{
                     headerView.layer.zPosition = 0
-//                    navBarBgAlpha = 0
-//                    navBarTitleColor = .clear
-
+                    
+                    guard let _ = hasNavigationController else {
+                        return
+                    }
+                    navBarBgAlpha = 0
+                    navBarBgColor = .clear
                 }
 
             }else if avatarImage.layer.zPosition >= headerView.layer.zPosition {
                     headerView.layer.zPosition = 2
-//                navBarBgAlpha = 1
-//                navBarTitleColor = UIColor(r: 102, g: 102, b: 102)
-
+                
+                guard let _ = hasNavigationController else {
+                    return
+                }
+                navBarBgAlpha = 1
+                navBarBgColor = UIColor(r: 18, g: 217, b: 148)
             }
         }
 

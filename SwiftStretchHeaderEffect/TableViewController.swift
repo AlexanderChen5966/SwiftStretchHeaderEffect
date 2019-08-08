@@ -21,12 +21,13 @@ class TableViewController: UIViewController {
     var headerColorViewAlpha: CGFloat? = 0.0
 
     @IBOutlet var closeButton:UIButton!
+    var hasNavigationController: Bool? = false
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        tableView.contentInset = UIEdgeInsets(top: headerView.frame.height , left: 0, bottom: 0, right: 0)
+        tableView.contentInset = UIEdgeInsets(top: headerView.frame.height , left: 0, bottom: 0, right: 0)
 
         offsetHeaderStop = headerView.frame.height - 64 // 64為HeaderView上推後的高度
 
@@ -38,12 +39,14 @@ class TableViewController: UIViewController {
         if let viewControllers = self.navigationController?.viewControllers {
             debugPrint("is navigationController")
             closeButton.isHidden = true
-//            hasNavigationController = true
-
-
+            hasNavigationController = true
+            
             navBarBgAlpha = 0
             navBarTitleColor = .clear
+            navBarBgColor = .clear
             isHiddenShadowImage = true
+            
+            headerColorView.isHidden = true
         } else {
             debugPrint("not navigationController")
         }
@@ -91,11 +94,7 @@ extension TableViewController: UITableViewDelegate, UITableViewDataSource {
             let headerSizevariation = ((headerView.bounds.height * (1.0 + headerScaleFactor)) - headerView.bounds.height)/2.0
             headerTransform = CATransform3DTranslate(headerTransform, 0, headerSizevariation, 0)
             headerTransform = CATransform3DScale(headerTransform, 1.0 + headerScaleFactor, 1.0 + headerScaleFactor, 0)
-            
-//             Hide views if scrolled super fast
-//            headerView.layer.transform = headerTransform
-//            headerView.layer.zPosition = 0
-            
+                        
             if headerColorViewAlpha != 0 {
                 headerColorView?.alpha = 0
             }
@@ -124,10 +123,24 @@ extension TableViewController: UITableViewDelegate, UITableViewDataSource {
             if offset <= offsetHeaderStop {
                 if avatarImage.layer.zPosition < headerView.layer.zPosition{
                     headerView.layer.zPosition = 0
+                    
+                    guard let _ = hasNavigationController else {
+                        return
+                    }
+                    navBarBgAlpha = 0
+                    navBarBgColor = .clear
+
                 }
                 
             }else if avatarImage.layer.zPosition >= headerView.layer.zPosition {
                 headerView.layer.zPosition = 2
+                
+                guard let _ = hasNavigationController else {
+                    return
+                }
+                navBarBgAlpha = 1
+                navBarBgColor = UIColor(r: 0, g: 150, b: 255)
+
             }
         }
         
