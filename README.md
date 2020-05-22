@@ -1,6 +1,7 @@
 # SwiftStretchHeaderEffect
 
 ### 效果
+![Alt text](https://github.com/AlexanderChen5966/SwiftStretchHeaderEffect/blob/dev/Screenshots/1.gif )
 
 ---
 ### 參考
