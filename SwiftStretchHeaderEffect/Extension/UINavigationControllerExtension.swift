@@ -176,7 +176,7 @@ extension UINavigationBar {
     fileprivate func backgroundColor(_ color: UIColor) {
         
         if backgroundView == nil {
-            // 添加一个透明背景的 image 到 _UIBarBackground
+            // 加入一個透明背景的 image 到 _UIBarBackground
             setBackgroundImage(UIImage(), for: .default)
             let height = UIApplication.shared.statusBarFrame.size.height + self.frame.height
             backgroundView = UIView(frame: CGRect(x: 0, y: 0, width: Int(bounds.width), height: Int(height)))
