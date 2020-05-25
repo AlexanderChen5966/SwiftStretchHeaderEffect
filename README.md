@@ -16,10 +16,22 @@
 ## 作法
 ![Alt text](https://github.com/AlexanderChen5966/SwiftStretchHeaderEffect/blob/dev/Screenshots/%E5%AE%8C%E6%88%90%E5%9C%961.png )
 
+![Alt text](https://github.com/AlexanderChen5966/SwiftStretchHeaderEffect/blob/dev/Screenshots/TableView%E7%B4%84%E6%9D%9F.png )
+![Alt text](https://github.com/AlexanderChen5966/SwiftStretchHeaderEffect/blob/dev/Screenshots/TableView%20Content%20Insets.png )
+
 1. 先做藍色區塊TableView的約束設定，將下、左、右的約束設為0，**上方約束設定方式會比較不一樣**，不要對齊Safe Area，對齊最底層的**UIView**上方設為0，然後這一步很重要在StroyBoard 選單中找出**Content  Insets參數**預設是*Automatic*，改成*Never*。
 
+![Alt text](https://github.com/AlexanderChen5966/SwiftStretchHeaderEffect/blob/dev/Screenshots/HeaderView%E8%88%87TableView%E7%9A%84%E9%9A%8E%E5%B1%A4.png )
+![Alt text](https://github.com/AlexanderChen5966/SwiftStretchHeaderEffect/blob/dev/Screenshots/HeaderView%E7%B4%84%E6%9D%9F.png )
+![Alt text](https://github.com/AlexanderChen5966/SwiftStretchHeaderEffect/blob/dev/Screenshots/%E5%8F%B3%E9%8D%B5%E6%8B%96%E6%9B%B3.png )
+![Alt text](https://github.com/AlexanderChen5966/SwiftStretchHeaderEffect/blob/dev/Screenshots/HeaderView%E5%B0%8DTableView%20Top%E5%B0%8D%E9%BD%8A.png )
 
 2. 再來做紅色區塊的UI佈局，首先從StoryBoard UI工具中拖曳一個UIView元件，當作HeaderView，**記得不要放在TableView內部，要和TableView在同一個階層，並放在上層蓋過TableView**，接著設定該UIView的約束，只需要設定上、左、右的約束，左、右約束設為0，上邊約束對齊(Top Align)TableView上邊(右鍵從*HeaderView*拖曳到*TableView*上就可以看到設定選單)，然後高度要設定多少看個人需要，此範例設定為110，。
+
+
+![Alt text](https://github.com/AlexanderChen5966/SwiftStretchHeaderEffect/blob/dev/Screenshots/ImageView%E9%9A%8E%E5%B1%A4.png )
+![Alt text](https://github.com/AlexanderChen5966/SwiftStretchHeaderEffect/blob/dev/Screenshots/ImageView%E7%B4%84%E6%9D%9F.png )
+![Alt text](https://github.com/AlexanderChen5966/SwiftStretchHeaderEffect/blob/dev/Screenshots/ImageView%20Content%20Model.png )
 
 3. 將一個UIImageView放到步驟2的UIView當中，並設定四邊的約束都為0，並在StoryBoard選單找出**Content  Mode參數**改成*Aspect Fill*。。
 
