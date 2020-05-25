@@ -1,11 +1,3 @@
-//
-//  UIColorExtension.swift
-//  BrandApp
-//
-//  Created by Bobson on 2016/3/15.
-//  Copyright © 2016年 Sonet. All rights reserved.
-//
-
 import UIKit
 
 extension UIColor {

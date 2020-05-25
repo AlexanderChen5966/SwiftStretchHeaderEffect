@@ -1,11 +1,3 @@
-//
-//  UINavigationExtendsion.swift
-//  BrandApp
-//
-//  Created by Bobson on 2015/12/30.
-//  Copyright © 2015年 Sonet. All rights reserved.
-//
-
 import UIKit
 
 
@@ -409,7 +401,7 @@ extension UINavigationController: SelfAware {
  * 替代 Objective-C 中的 +load() 方法
  * 替代 Swift 之前版本中的 initialize() 方法
  * 透過 runtime 取得到所有類別的列表，
- * 然後向所有諄遵循 SelfAware Protocol的ㄋ類別發送消息，並且把這些操作放到 UIApplication 的 next 屬性的調用中，
+ * 然後向所有諄遵循 SelfAware Protocol的類別發送消息，並且把這些操作放到 UIApplication 的 next 屬性的調用中，
  * 同時 next 屬性下會在 applicationDidFinishLaunching 之前被調用。
  */
 private protocol SelfAware: class {
