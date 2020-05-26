@@ -73,6 +73,7 @@
 
 #### 5. 說明程式碼
 offsetHeaderStop是設定希望將HeaderView上推倒多少高度停止所使用的變數，範例中會停止在和Navigation Bar 加上StatusBar一樣的高度，當然如果有其他高度想要使用可直接針對這個變數修改。
+
 ```
 private var offsetHeaderStop:CGFloat = 0 //Header上推到多少高度停止
 
@@ -156,9 +157,30 @@ func scrollViewDidScroll(_ scrollView: UIScrollView) {
 
 ```
 
+#### 6. NavigationBar
+上面都做完之後應該會發現，在有NavigationController的時候，NavigationBar會蓋住範例中的畫面，那麼就需要去隱藏或是修改顏色之類的屬性，將NavigationBar原本的背景色、下邊線等等屬性隱藏
+
+
+關於官方提供的方法來NavigationBar的屬性，在換頁的時候會有一些問題存在。
+
+最好是使用*Method Swizzling*來修改轉場效果與屬性會更適合。
+
+**這裡要注意，如果NavigationBar是使用Large Title模式的話，這個修改屬性的方法並不適用。**
+
+附上我參考的文章，或是可以看我整理在Extension檔案夾當中的UINavigationControllerExtension檔案
+
+[https://tomatosx.github.io/2018/07/06/2018-07-06-NavigationBar%20%E4%B8%8D%E5%90%8C%E9%A2%9C%E8%89%B2%E6%97%B6%E7%9A%84%E8%BD%AC%E5%9C%BA/
+](https://tomatosx.github.io/2018/07/06/2018-07-06-NavigationBar%20%E4%B8%8D%E5%90%8C%E9%A2%9C%E8%89%B2%E6%97%B6%E7%9A%84%E8%BD%AC%E5%9C%BA/)
+
 ---
+
 ## 參考
 1. [https://www.thinkandbuild.it/implementing-the-twitter-ios-app-ui/
 ](https://www.thinkandbuild.it/implementing-the-twitter-ios-app-ui/)
 2. [http://nathanwhy.com/2015/03/02/2015-03-02-implementing-the-twitter-ios-app-ui/
 ](http://nathanwhy.com/2015/03/02/2015-03-02-implementing-the-twitter-ios-app-ui/)
+
+
+如果要找一些第三方套件和英文的文章可以搜尋下列的關鍵字
+
+關鍵字:Stretchy Header Effect、Twitter Effect、Parallax Effect、Sticky View、下拉圖片放大
